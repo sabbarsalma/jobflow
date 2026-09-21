@@ -1,4 +1,5 @@
 import { PrismaClient } from "./generated/prisma/client";
+import ApplicationForm from "./components/ApplicationForm";
 
 const prisma = new PrismaClient();
 
@@ -8,6 +9,7 @@ export default async function Home() {
   return (
     <div>
       <h1>Mes candidatures</h1>
+      <ApplicationForm />
       <div>
         {applications.map((app) => (
           <div key={app.id}>
